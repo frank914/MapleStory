@@ -233,7 +233,7 @@ function Judgebrand2(name,nameP,first,second){
 }
 
 function CompareSize( PlayerSize, ComputerSize ) { // 玩家大電腦 RETURN TRUE
-	if ( Player > ComputerSize )
+	if ( PlayerSize > ComputerSize )
 		return true;
 	else
 		return false;
