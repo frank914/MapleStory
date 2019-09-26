@@ -88,14 +88,14 @@ function action(mode, type, selection) {
 				cm.dispose();
 				return;
 			}else
-				cm.getPlayer().modifyCSPoints(-Consume, 2, true);
+				cm.getPlayer().modifyCSPoints( 2, -Consume, true);
 		} else if ( typed == 2 ) {
 			if ( cm.getPlayer().getCSPoints(1) < Consume*PointVector[11][2] ){
 				cm.sendOk("您的金額不足以負擔最慘的狀況欸");
 				cm.dispose();
 				return;
 			}else
-				cm.getPlayer().modifyCSPoints(-Consume, 1, true);
+				cm.getPlayer().modifyCSPoints(1,-Consume, true);
 		}
 		text  = "#b帥哥/美女\r\n#k";
 		text += "您下注的額度是"+Consume+typedName[typed]+"\r\n\r\n";
@@ -128,9 +128,9 @@ function action(mode, type, selection) {
 			if ( typed == 0 ){
 				cm.gainMeso(-Consume*(Computer[2]-1));
 			} else if ( typed == 1 ) {
-				cm.getPlayer().modifyCSPoints(-Consume*Computer[2], 2, true);
+				cm.getPlayer().modifyCSPoints( 2,-Consume*Computer[2], true);
 			} else if ( typed == 2 ) {
-				cm.getPlayer().modifyCSPoints(-Consume*Computer[2], 1, true);
+				cm.getPlayer().modifyCSPoints( 1,-Consume*Computer[2], true);
 			}
 			text = "你目前手上的牌"+PlayerH[0]+"."+PlayerH[1]+"."+PlayerH[2]+"."+PlayerH[3]+"."+PlayerH[4]+":#b"+Player[0]+"\r\n";
 			text += "#k比莊家目前手上的牌"+ComputerH[0]+"."+ComputerH[1]+"."+ComputerH[2]+"."+ComputerH[3]+"."+ComputerH[4]+":#b"+Computer[0]+"\r\n";
